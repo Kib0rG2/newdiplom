@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Сайт-визитка</title>
 
+    <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 <header class="header">
@@ -16,7 +18,7 @@
     <div class="header_top">
         <div class="logo">
             <a href="" class="logo">
-                <img class="logo" src=""
+                <img class="logo" src="images/logo.png">
             </a>
         </div>
         <nav class="navigation">
@@ -28,16 +30,15 @@
                     <a class="menu-element__link" href="#katalog">Каталог</a>
                 </li>
                 <li class="menu-element">
-                    <a class="menu-element__link" href="#about-me">О нас</a>
+                    <a class="menu-element__link" href="#about-me">Описание </a>
                 </li>
                 <li class="menu-element">
                     <a class="menu-element__link" href="#ivents">События</a>
                 </li>
-                <form action="" class="contact-me__form">
-                    <div class="input-wrapper">
-                        <label class="label " for="finder"></label>
-                        <input class="input" type="text" id="finder" placeholder="Поиск..."/>
-                    </div>
+                <li class="menu-element">
+                    <a href="https://www.wildberries.ru/seller/374476" class="menu-element__link" href="#ivents">
+                        Wildberries</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -68,82 +69,69 @@
         <p class="about-me__description">2 года 6 месяцев на Wildberries</p>
 </section>
 <section class="slider">
-    <h2 class="second-title">Слайдер</h2>
-    <div class="slider__list">
-        <div class="slider-wrapper">
-            <img src="images/1.jpg" alt="" class="news-image /">
-            <p class="slider-title bold">Товар1</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
+    <div id="slider-container">
+        <div id="slider-images">
+            <img class="slider-image" src="images/slider/1.jpg" alt="Image 1">
+            <img class="slider-image" src="images/slider/2.jpg" alt="Image 2">
+            <img class="slider-image" src="images/slider/3.jpg" alt="Image 3">
         </div>
-        <div class="slider-wrapper">
-            <img src="images/2.jpg" alt="" class="katalog-image /">
-            <p class="slider-title bold">Товар11</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-        </div>
-        <div class="katalog-wrapper">
-            <img src="images/4.jpg" alt="" class="katalog-image /">
-            <p class="slider-title bold">Товар4</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-        </div>
-        <div class="slider-wrapper">
-            <img src="images/2.jpg" alt="" class="katalog-image /">
-            <p class="slider-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class=slider-text">Lorem ipsum dolor sit.</p>
-        </div>
-        <div class="slider-wrapper">
-            <img src="images/1.jpg" alt="" class="katalog-image /">
-            <p class="slider-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-        </div>
-        <div class="slider-wrapper">
-            <img src="images/4.jpg" alt="" class="katalog-image /">
-            <p class="slider-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-            <p class="slider-text">Lorem ipsum dolor sit.</p>
-        </div>
+        <div id="prev-btn">&#10094;</div>
+        <div id="next-btn">&#10095;</div>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slider.js"></script>
 </section>
 <section id="katalog" class="katalog">
     <h2 class="second-title">Каталог</h2>
     <div class="katalog__list">
         <div class="katalog-wrapper">
-            <img src="images/1.jpg" alt="" class="news-image /">
-            <p class="katalog-title bold">Товар1</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/ball.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Мяч массажный</p>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">3.8</p>
+            <p class="katalog-text_price">175 ₽</p>
+             <p class="katalog-text"><s>1 160 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/2.jpg" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Товар11</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/эспандеры.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Фитнес эспандеры</p>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">4.8</p>
+            <p class="katalog-text_price">683 ₽</p>
+             <p class="katalog-text"><s>4 700 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/4.jpg" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Товар4</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/ролик для пресса.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Ролик для пресса</p>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">4.8</p>
+            <p class="katalog-text_price">701 ₽</p>
+             <p class="katalog-text"><s>2 120 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/2.jpg" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/массажёр.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Перкуссионный массажер <br> для тела</p>
+             <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">4.8</p>
+            <p class="katalog-text_price">1 256 ₽</p>
+             <p class="katalog-text"><s>4 465 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/1.jpg" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/массажный валик.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Валик для спины массажный</p>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">4.9</p>
+            <p class="katalog-text_price">899 ₽</p>
+             <p class="katalog-text"><s>3 627 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/4.jpg" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Lorem ipsum dolor sit amet.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <img src="images/tovar/массажёр2.png" alt="" class="katalog-image /">
+            <p class="katalog-title bold">Перкуссионный массажер <br> для тела</p>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text">4.8</p>
+            <p class="katalog-text_price">1 989 ₽</p>
+            <p class="katalog-text"><s>6 405 ₽</s></p>
         </div>
     </div>
 </section>
@@ -151,21 +139,19 @@
     <h2 class="second-title">Новости</h2>
     <div class="news__list">
         <div class="news-wrapper">
-            <img src="images/1.jpg" alt="" class="katalog-image /">
-            <p class="news-title-text ">Сегодня появился новый товар</p>
+            <p class="news-text ">Не допускайте таких ошибок при похудении!</p>
+            <iframe class="video" src="https://vk.com/video_ext.php?oid=-121806510&id=456239042&hash=e8f852572116f523" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
         <div class="news-wrapper">
-            <p class="news-text">I am th ultimate life form</p>
-        </div>
-        <div class="news-wrapper">
-            <p class="katalog-text">Lorem ipsum dolor sit.</p>
+            <p class="news-text">Чем полезны занятия спортом? Узнайте в этом видео.</p>
+            <iframe src="https://vk.com/video_ext.php?oid=-121806510&id=456239036&hash=e1a6bc1115c146a0" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </div>
 </section>
 <section id="ivents" class="ivents">
     <h2 class="second-title">События</h2>
     <div class="countdown-wrapper">
-        <h1 class="title">До обновления ассортимента осталось:</h1>
+        <h2 class="title_timer">До обновления ассортимента осталось:</h2>
         <div class="month" id="month"></div>
         <div class="countdown" id="countdown">
             <div class="time">
@@ -192,45 +178,51 @@
             </div>
         </div>
     </div>
-    <script src="/timer.js"></script>
+    <script src="js/timer.js"></script>
 
 </section>
 <section class="contact-me">
-    <h2 class="second-title">Обратная связь</h2>
-    <form action="" class="contact-me__form">
-        <div class="input-wrapper left">
-            <label class="label bold" for="name">Name</label>
-            <input class="input" type="text" id="name" placeholder="Введите ваше имя" required/>
-        </div>
-        <div class="input-wrapper right">
-            <label class="label bold" for="e-mail">E-mail</label>
-            <input class="input" type="email" id="e-mail" placeholder="Введите ваш e-mail адресс" required/>
-        </div>
-        <div class="cls"></div>
-        <div class="textarea-wrapper">
-            <label class="label bold" for="Сообщение">Сообщение</label>
-            <textarea class="textarea" name="message" id="message" cols="30" rows="10"
-                      placeholder="Напишите причину, по которой хотите с нами связаться" required></textarea>
-        </div>
-        <button type="submit" class="submit">Отправить</button>
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="aec1fec2-eb33-4622-a095-e2573335aa52">
+
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <label class="label" for="name">
+        <input type="text" name="name" placeholder="Имя" required>
+        </label>
+        <label class="label" for="e-mail">
+            <input type="email" name="email" placeholder="E-mail" required>
+        </label>
+        <label class="label" for="Сообщение">
+        <textarea name="message" placeholder="Сообщение" required></textarea>
+        </label>
+
+        <!-- hCaptcha Spam Protection -->
+        <div class="h-captcha" data-captcha="true"></div>
+
+        <button type="submit">Отправить сообщение</button>
+
     </form>
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </section>
 <footer class="footer">
     <ul class="socials">
         <h2 class="second-title">Соцсети</h2>
         <hr class="line__footer">
         <li class="social-elements">
-            <label class="label" for="ВКонтакте">
+            <label class="label_1" for="ВКонтакте">
                 <a href="https://vk.com/vinp_life" class="social-elements__link" for="ВКонтакте">ВКонтакте</a>
             </label>
         </li>
         <li class="social-elements">
-            <label class="label" for="Telegramm">
-                <a href="" class="social-elements__link">Telegramm</a>
+            <label class="label_1" for="Одноклассники">
+                <a href="" class="social-elements__link">Одноклассники</a>
             </label>
         </li>
         <li class="social-elements">
-            <label class="label" for="Наш Youtube канал">
+            <label class="label_1" for="Наш Youtube канал">
                 <a href="https://youtube.com/@vinpsport" class="social-elements__link">Наш Youtube канал</a>
             </label>
         </li>
@@ -265,7 +257,6 @@
         </li>
     </ul>
 </footer>
-<hr>
 <section class="footer-description">
     <p class="footer-about">
         VINP &nbsp; | &nbsp; Товары &nbsp; для &nbsp;спорта &nbsp; с &nbsp; WB &nbsp;

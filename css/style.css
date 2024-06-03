@@ -1,6 +1,6 @@
 /*Переменные*/
 :root {
-    --color-green: #76bc21;
+
     --background-black-opacity: rgb(0, 0, 0, 25%);
     --color-text: #696969;
     --color-grey: #9e9e9e;
@@ -8,50 +8,36 @@
 }
 
 /*Слайдер*/
-.slider {
-    padding: 40px 20px;
-}
-
-.slider__list {
+ #slider-container {
+    width: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  #slider-images {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.slider-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-bottom: 30px;
-    padding: 20px 10px;
-
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-.slider-image {
-    width: 250px;
-    margin-bottom: 20px;
-}
-
-.slider-title {
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: var(--color-green);
-}
-
-.slider-text {
-    color: var(--color-text)
-    margin-bottom: 10px
-}
-
-.slider-text:last-of-type {
-    margin-bottom: 0;
-}
-
+    transition: transform 0.5s ease;
+    transform: scale (0.6);
+  }
+  .slider-image {
+    flex: 0 0 500px;
+    height: 300px;
+  }
+  #prev-btn, #next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  #prev-btn {
+    left: 10px;
+  }
+  #next-btn {
+    right: 10px;
+  }
 /*О нас*/
 .about-me {
+    margin-top: 20px;
     margin-left: 30px;
 }
 
@@ -79,14 +65,14 @@
 .about-me__second-title {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     color: var(--b);
 }
 
 .about-me__description {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 23px;
     letter-spacing: 0.05em;
     color: #000;
     margin-bottom: 20px;
@@ -95,7 +81,7 @@
 .about-me__description_1 {
     ont-family: var(--font-family);
     font-weight: 700;
-    font-size: 16px;
+    font-size: 23px;
     letter-spacing: 0.05em;
     color: #000;
     margin-bottom: 10px;
@@ -135,29 +121,30 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    padding: 20px;
 }
 
 .katalog-wrapper {
-    display: flex;
+     background-color: var(--background-grey);
+
     flex-direction: column;
-    width: 30%;
+
     margin-bottom: 30px;
     padding: 20px 10px;
 
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px  rgba(0, 0, 0, 0.2);
 }
 
 
 .katalog-image {
-    width: 250px;
     margin-bottom: 20px;
 }
 
 .katalog-title {
     margin-bottom: 15px;
     font-size: 20px;
-    color: var(--color-green);
+    color: ;
 }
 
 .katalog-text {
@@ -167,6 +154,16 @@
 
 .katalog-text:last-of-type {
     margin-bottom: 0;
+}
+.katalog-text_price {
+    font-weight: bold;
+    font-size:20px;
+    color:
+}
+.katalog-text_vinp {
+    font-weight: bold;
+    font-size:15px;
+
 }
 
 /*Новости*/
@@ -185,150 +182,76 @@
 .news-wrapper {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 27%;
     margin-bottom: 30px;
-    padding: 20px 10px;
+    padding: 5px 10px;
 
     border-radius: 5px;
     background-color: var(--background-grey);
 
 
 }
-
-.news-image {
-    width: 250px;
-    margin-bottom: 20px;
-}
-
 .news-title {
     margin-bottom: 15px;
     font-size: 20px;
     color: var(--color-green);
+
 }
 
 .news-text {
+    font-family: var(--font-family);
     color: var(--color-text)
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    color: #000;
+
 }
 
 .news-text:last-of-type {
     margin-bottom: 0;
 }
-
 /*Связь*/
-.contact-me {
-    padding: 40px 20px;
-}
-
-.contact-me__form {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-
-}
-
-.input-wrapper {
-    width: 48%;
-    display: inline-block;
-}
-
-.input-wrapper.left {
-    float: left;
-}
-
-.input-wrapper.right {
-    float: right;
-}
-
-.textarea-wrapper {
-    margin-top: 20px;
-}
-
-.label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-    font-size: 20px;
-}
-
-.label:before {
-    content: "";
-
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
-
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.input {
-    width: 100%;
-    min-width: 92%;
-    padding: 5px 5px 5px 20px;
-    border: none;
-    outline: 2px solid var(--color-grey);
-}
-
-input.input:focus {
-    outline: 2px solid var(--color-green);
-}
 
 .label[for="name"]:before {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" /></svg>');
 }
 
 .label[for="e-mail"]:before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" /><path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" /></svg>');
+   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75' /%3e%3c/svg%3e ");
 }
 
-.label[for="Сообщение"]:before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path fill-rule="evenodd" d="M4.804 21.644A6.707 6.707 0 0 0 6 21.75a6.721 6.721 0 0 0 3.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 0 1-.814 1.686.75.75 0 0 0 .44 1.223ZM8.25 10.875a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25ZM10.875 12a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Zm4.875-1.125a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25Z" clip-rule="evenodd" /></svg>');
+
+
+form {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы в столбик */
+    max-width: 400px;
+    padding-left: 20px;
 }
 
-.input, .textarea {
-    width: 100px;
-    border: none;
-    outline: 2px solid var(--color-grey);
+/* Добавляем закругление углов для всех элементов формы */
+input[type="text"],
+input[type="email"],
+textarea,
+button {
+    border-radius: 5px;
+    padding: 10px; /* Добавляем отступы для лучшего визуального эффекта */
+    margin-bottom: 10px; /* Добавляем отступ между элементами */
 }
 
-.textarea {
-    padding: 20px;
-    max-width 100%;
-    min-width: 95%;
-    min-height: 60px;
+/* Добавляем стили для кнопки */
+button {
+    background-color: #4CAF50; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    cursor: pointer; /* Изменяем курсор при наведении */
+    max-width: 200px;
 }
 
-.input:focus, .textarea:focus {
-    outline: 2px solid var(--color-green);
-}
-
-.submit {
-    display: block-inline;
-    height: 25px;
-    padding: 10px 5px;
-    margin-top: 10px;
-
-    border: none;
-    border-radius: 2px;
-    background: var(--color-green);
-    outline: none;
-    box-shadow: none;
-    cursor: pointer;
-    opacity: .8;
-    transition-opacity: .25s ease;
-    color: #ffff;
-    margin-left: auto;
-
-}
-
-.submit:hover {
-    opacity: 1;
+/* При наведении на кнопку */
+button:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
 }
 
 /*Футер*/
@@ -341,6 +264,7 @@ input.input:focus {
     background-color: var(--background-grey);
     justify-content: space-between;
 }
+
 
 .footer > ul:first-child,
 .footer > ul:last-child {
@@ -360,7 +284,6 @@ input.input:focus {
     letter-spacing: 0.05em;
     color: #000;
 }
-
 .footer-menu-elements {
     display: flex;
     font-family: var(--font-family);
@@ -369,6 +292,7 @@ input.input:focus {
     color: var(--b);
     margin-top: 20px;
 }
+
 
 .footer-description {
     background-color: ;
@@ -389,15 +313,40 @@ input.input:focus {
     font-size: 20px;
     margin-top: 20px;
 }
-.label[for="Telegramm"]:before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 50 50"><path d="M 25 8 C 15.611 8 8 15.611 8 25 C 8 34.389 15.611 42 25 42 C 34.389 42 42 34.389 42 25 C 42 15.611 34.389 8 25 8 z M 25 9 C 33.837 9 41 16.163 41 25 C 41 33.837 33.837 41 25 41 C 16.163 41 9 33.837 9 25 C 9 16.163 16.163 9 25 9 z M 31.986328 18.306641 C 31.593984 18.261266 31.102031 18.367656 30.550781 18.566406 C 29.543781 18.929406 16.672687 24.394938 15.929688 24.710938 C 15.224688 25.010938 14.557641 25.337547 14.556641 25.810547 C 14.556641 26.142547 14.754828 26.329438 15.298828 26.523438 C 15.864828 26.725437 17.290813 27.158625 18.132812 27.390625 C 18.943813 27.614625 19.867766 27.418656 20.384766 27.097656 C 20.932766 26.756656 27.262797 22.521391 27.716797 22.150391 C 28.170797 21.779391 28.531156 22.255953 28.160156 22.626953 C 27.788156 22.998953 23.444094 27.214828 22.871094 27.798828 C 22.175094 28.507828 22.669719 29.243109 23.136719 29.537109 C 23.669719 29.873109 27.502078 32.442469 28.080078 32.855469 C 28.658078 33.267469 29.243297 33.455078 29.779297 33.455078 C 30.315297 33.455078 30.596281 32.748688 30.863281 31.929688 C 31.176281 30.970687 32.642266 21.407438 32.822266 19.523438 C 32.876266 18.953437 32.69675 18.573297 32.34375 18.404297 C 32.237 18.353047 32.117109 18.321766 31.986328 18.306641 z"></path></svg>');
+.label:before {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height: 25px;
+    position: relative;
+    background-repeat: no repeat;
+    vertical-align: middle;
+
 }
-.label[for="ВКонтакте"]:before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 24 24"><path d="M 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 20.105 3.895 21 5 21 L 19 21 C 20.105 21 21 20.105 21 19 L 21 5 C 21 3.895 20.105 3 19 3 L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 5 z M 11.791016 8.8574219 C 11.201016 8.8524219 10.700969 8.8600469 10.417969 8.9980469 C 10.229969 9.0900469 10.084828 9.2965937 10.173828 9.3085938 C 10.282828 9.3225937 10.529109 9.3746875 10.662109 9.5546875 C 10.831109 9.7856875 10.826172 10.304688 10.826172 10.304688 C 10.826172 10.304687 10.922656 11.732156 10.597656 11.910156 C 10.374656 12.032156 10.069109 11.784437 9.4121094 10.648438 C 9.0751094 10.065437 8.8222656 9.421875 8.8222656 9.421875 C 8.8222656 9.421875 8.7725469 9.3003281 8.6855469 9.2363281 C 8.5785469 9.1583281 8.4296875 9.1328125 8.4296875 9.1328125 L 6.859375 9.140625 C 6.859375 9.140625 6.6221563 9.1411406 6.5351562 9.2441406 C 6.4581563 9.3361406 6.5292969 9.5175781 6.5292969 9.5175781 C 6.5292969 9.5175781 7.7602969 12.386844 9.1542969 13.839844 C 10.433297 15.171844 11.882812 15.050781 11.882812 15.050781 L 12.541016 15.050781 C 12.541016 15.050781 12.740797 15.062125 12.841797 14.953125 C 12.934797 14.852125 12.931641 14.695312 12.931641 14.695312 C 12.931641 14.695312 12.919125 13.811641 13.328125 13.681641 C 13.732125 13.553641 14.249828 14.535109 14.798828 14.912109 C 15.212828 15.198109 15.529297 15.136719 15.529297 15.136719 L 16.998047 15.117188 C 16.998047 15.117188 17.765297 15.068938 17.404297 14.460938 C 17.374297 14.410937 17.1925 14.013312 16.3125 13.195312 C 15.3905 12.339313 15.514047 12.477094 16.623047 10.996094 C 17.299047 10.095094 17.569375 9.5445938 17.484375 9.3085938 C 17.403375 9.0825937 16.90625 9.1425781 16.90625 9.1425781 L 15.253906 9.1523438 C 15.253906 9.1523438 15.130062 9.1344531 15.039062 9.1894531 C 14.950063 9.2434531 14.892578 9.3671875 14.892578 9.3671875 C 14.892578 9.3671875 14.63125 10.066156 14.28125 10.660156 C 13.54625 11.913156 13.251859 11.978391 13.130859 11.900391 C 12.850859 11.720391 12.921875 11.174156 12.921875 10.785156 C 12.921875 9.5711562 13.1045 9.0645938 12.5625 8.9335938 C 12.3825 8.8895937 12.251016 8.8624219 11.791016 8.8574219 z"></path></svg>');
+.label_1:before {
+    content: "";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width:25px;
+    height: 25px;
+    position: relative;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+
 }
-.label[for="Наш Youtube канал"]:before {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 24 24"><path d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"></path></svg>');
+.label_1[for="Одноклассники"]:before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50"><path d="M 9 4 C 6.2504839 4 4 6.2504839 4 9 L 4 41 C 4 43.749516 6.2504839 46 9 46 L 41 46 C 43.749516 46 46 43.749516 46 41 L 46 9 C 46 6.2504839 43.749516 4 41 4 L 9 4 z M 9 6 L 41 6 C 42.668484 6 44 7.3315161 44 9 L 44 41 C 44 42.668484 42.668484 44 41 44 L 9 44 C 7.3315161 44 6 42.668484 6 41 L 6 9 C 6 7.3315161 7.3315161 6 9 6 z M 25 8 C 20.040757 8 16 12.040757 16 17 C 16 21.959243 20.040757 26 25 26 C 29.959243 26 34 21.959243 34 17 C 34 12.040757 29.959243 8 25 8 z M 25 10 C 28.878757 10 32 13.121243 32 17 C 32 20.878757 28.878757 24 25 24 C 21.121243 24 18 20.878757 18 17 C 18 13.121243 21.121243 10 25 10 z M 25 12 C 22.250421 12 20 14.250421 20 17 C 20 19.749579 22.250421 22 25 22 C 27.749579 22 30 19.749579 30 17 C 30 14.250421 27.749579 12 25 12 z M 25 14 C 26.668699 14 28 15.331301 28 17 C 28 18.668699 26.668699 20 25 20 C 23.331301 20 22 18.668699 22 17 C 22 15.331301 23.331301 14 25 14 z M 32.951172 25.496094 C 32.372772 25.503634 31.791345 25.676303 31.285156 26.027344 L 31.283203 26.027344 L 31.28125 26.029297 C 29.432856 27.320898 27.268379 28 25 28 C 22.737298 28 20.576731 27.323821 18.728516 26.039062 C 17.377623 25.098209 15.490886 25.437767 14.552734 26.789062 C 13.613177 28.139582 13.952491 30.025479 15.302734 30.964844 C 16.454169 31.76524 17.758305 32.225808 19.046875 32.710938 L 14.878906 36.878906 C 13.715833 38.041979 13.715833 39.958021 14.878906 41.121094 C 15.460397 41.702585 16.234094 42 17 42 C 17.765906 42 18.539603 41.702585 19.121094 41.121094 L 25 35.242188 L 30.878906 41.121094 C 31.460397 41.702585 32.234094 42 33 42 C 33.765906 42 34.539603 41.702585 35.121094 41.121094 C 36.284167 39.958021 36.284167 38.041979 35.121094 36.878906 L 31.060547 32.816406 C 32.335826 32.331112 33.576919 31.746206 34.716797 30.951172 C 36.064821 30.00979 36.402425 28.123102 35.460938 26.773438 C 34.990518 26.098747 34.282847 25.678008 33.525391 25.542969 C 33.336026 25.509209 33.143972 25.49358 32.951172 25.496094 z M 33.175781 27.5 C 33.426324 27.54446 33.659732 27.687659 33.820312 27.917969 C 34.142825 28.380303 34.034242 28.987929 33.572266 29.310547 C 32.16405 30.29274 30.615412 31.007156 28.982422 31.455078 L 27.324219 31.910156 L 28.539062 33.126953 L 33.707031 38.292969 C 34.105958 38.691896 34.105958 39.308104 33.707031 39.707031 C 33.506522 39.90754 33.258094 40 33 40 C 32.741906 40 32.493478 39.90754 32.292969 39.707031 L 25 32.414062 L 17.707031 39.707031 C 17.506522 39.90754 17.258094 40 17 40 C 16.741906 40 16.493478 39.90754 16.292969 39.707031 C 15.894042 39.308104 15.894042 38.691896 16.292969 38.292969 L 22.675781 31.910156 L 21.017578 31.455078 C 19.390514 31.007917 17.848643 30.297762 16.445312 29.322266 C 15.981556 28.99963 15.87287 28.395121 16.195312 27.931641 L 16.195312 27.929688 C 16.515162 27.468984 17.12483 27.358541 17.585938 27.679688 L 17.585938 27.681641 C 19.765721 29.196883 22.336702 30 25 30 C 27.668734 30 30.244732 29.193291 32.425781 27.669922 C 32.657863 27.508974 32.925238 27.455539 33.175781 27.5 z"></path></svg>');
 }
+.label_1[for="ВКонтакте"]:before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 24 24"><path d="M 5 3 C 3.895 3 3 3.895 3 5 L 3 19 C 3 20.105 3.895 21 5 21 L 19 21 C 20.105 21 21 20.105 21 19 L 21 5 C 21 3.895 20.105 3 19 3 L 5 3 z M 5 5 L 19 5 L 19 19 L 5 19 L 5 5 z M 11.791016 8.8574219 C 11.201016 8.8524219 10.700969 8.8600469 10.417969 8.9980469 C 10.229969 9.0900469 10.084828 9.2965937 10.173828 9.3085938 C 10.282828 9.3225937 10.529109 9.3746875 10.662109 9.5546875 C 10.831109 9.7856875 10.826172 10.304688 10.826172 10.304688 C 10.826172 10.304687 10.922656 11.732156 10.597656 11.910156 C 10.374656 12.032156 10.069109 11.784437 9.4121094 10.648438 C 9.0751094 10.065437 8.8222656 9.421875 8.8222656 9.421875 C 8.8222656 9.421875 8.7725469 9.3003281 8.6855469 9.2363281 C 8.5785469 9.1583281 8.4296875 9.1328125 8.4296875 9.1328125 L 6.859375 9.140625 C 6.859375 9.140625 6.6221563 9.1411406 6.5351562 9.2441406 C 6.4581563 9.3361406 6.5292969 9.5175781 6.5292969 9.5175781 C 6.5292969 9.5175781 7.7602969 12.386844 9.1542969 13.839844 C 10.433297 15.171844 11.882812 15.050781 11.882812 15.050781 L 12.541016 15.050781 C 12.541016 15.050781 12.740797 15.062125 12.841797 14.953125 C 12.934797 14.852125 12.931641 14.695312 12.931641 14.695312 C 12.931641 14.695312 12.919125 13.811641 13.328125 13.681641 C 13.732125 13.553641 14.249828 14.535109 14.798828 14.912109 C 15.212828 15.198109 15.529297 15.136719 15.529297 15.136719 L 16.998047 15.117188 C 16.998047 15.117188 17.765297 15.068938 17.404297 14.460938 C 17.374297 14.410937 17.1925 14.013312 16.3125 13.195312 C 15.3905 12.339313 15.514047 12.477094 16.623047 10.996094 C 17.299047 10.095094 17.569375 9.5445938 17.484375 9.3085938 C 17.403375 9.0825937 16.90625 9.1425781 16.90625 9.1425781 L 15.253906 9.1523438 C 15.253906 9.1523438 15.130062 9.1344531 15.039062 9.1894531 C 14.950063 9.2434531 14.892578 9.3671875 14.892578 9.3671875 C 14.892578 9.3671875 14.63125 10.066156 14.28125 10.660156 C 13.54625 11.913156 13.251859 11.978391 13.130859 11.900391 C 12.850859 11.720391 12.921875 11.174156 12.921875 10.785156 C 12.921875 9.5711562 13.1045 9.0645938 12.5625 8.9335938 C 12.3825 8.8895937 12.251016 8.8624219 11.791016 8.8574219 z"></path></svg>');
+}
+.label_1[for="Наш Youtube канал"]:before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 24 24"><path d="M 12 4 C 12 4 5.7455469 3.9999687 4.1855469 4.4179688 C 3.3245469 4.6479688 2.6479687 5.3255469 2.4179688 6.1855469 C 1.9999687 7.7455469 2 12 2 12 C 2 12 1.9999687 16.254453 2.4179688 17.814453 C 2.6479687 18.675453 3.3255469 19.352031 4.1855469 19.582031 C 5.7455469 20.000031 12 20 12 20 C 12 20 18.254453 20.000031 19.814453 19.582031 C 20.674453 19.352031 21.352031 18.674453 21.582031 17.814453 C 22.000031 16.254453 22 12 22 12 C 22 12 22.000031 7.7455469 21.582031 6.1855469 C 21.352031 5.3255469 20.674453 4.6479688 19.814453 4.4179688 C 18.254453 3.9999687 12 4 12 4 z M 12 6 C 14.882 6 18.490875 6.1336094 19.296875 6.3496094 C 19.465875 6.3946094 19.604391 6.533125 19.650391 6.703125 C 19.891391 7.601125 20 10.342 20 12 C 20 13.658 19.891391 16.397875 19.650391 17.296875 C 19.605391 17.465875 19.466875 17.604391 19.296875 17.650391 C 18.491875 17.866391 14.882 18 12 18 C 9.119 18 5.510125 17.866391 4.703125 17.650391 C 4.534125 17.605391 4.3956094 17.466875 4.3496094 17.296875 C 4.1086094 16.398875 4 13.658 4 12 C 4 10.342 4.1086094 7.6011719 4.3496094 6.7011719 C 4.3946094 6.5331719 4.533125 6.3946094 4.703125 6.3496094 C 5.508125 6.1336094 9.118 6 12 6 z M 10 8.5351562 L 10 15.464844 L 16 12 L 10 8.5351562 z"></path></svg>');
+}
+
 /*Общие стили*/
 a {
     color: var(--color-green);
@@ -425,10 +374,14 @@ a:hover {
 }
 
 /*Header*/
+.logo{
+    transform: scale(0.6);
+    margin-left:10px
+
+}
 .header {
     position: relative;
     height: 90vh;
-    margin-bottom: 20px;
 }
 
 .header__background {
@@ -440,13 +393,7 @@ a:hover {
     margin-right: 20px;
 }
 
-.header__background-wrapper {
-    position: absolute;
-    height: inherit;
-    width: 100%;
-    z-index: 1;
 
-}
 
 .header_top {
     position: relative;
@@ -461,73 +408,29 @@ a:hover {
 }
 
 .header_top a {
-    color: black;
+    color: white;
 }
-
-.header_top a.active {
-    color: var(--color-green);
-}
-
-.logo {
-    display: flex;
-    max-width: 100%;
-    margin-right: 30px;
-}
-
 .menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Центрирование элементов по вертикали */
+    justify-content: space-between;
+    background-color: #D197D8; /* Цвет заливки */
+    padding: 10px 20px; /* Поля вокруг элементов меню */
+    border-radius: 5px; /* Закругление краев */
+     margin-right: 10px;
+
 }
 
 .menu-element {
-    margin-right: 80px;
-    font-size: 18px;
-}
-
-.menu-element: last-child {
     margin-right: 30px;
-}
-
-.header_center {
-    position: relative;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px);
-    z-index: 2;
-
+    font-size: 20px;
+    margin-left: 45px;
 
 }
-
-.input-wrapper {
-    margin-bottom: 30px;
-    margin-right: 20px;
-}
-
-.header_center__wrapper {
-    width: 100%;
-    text-align: center;
-    background: var(--background-black-opacity);
-    text-align: center
-    padding: 20px, 0;
-}
-
-.name {
-    font-size: 50px;
-    line-height: 74px;
-}
-
-.description {
-    font-size: 28px;
-}
-
 /*Media points*/
 /*Timer*/
-.title{
-    margin-left: 37%;
+.title_timer {
+    text-align: center;
 }
 .countdown {
 	display: none;
@@ -552,32 +455,7 @@ a:hover {
 	font-size: 26px;
 }
 
-@media (max-width: 500px) {
-	.title {
-		font-size: 35px;
-	}
 
-	.year {
-		display: none;
-	}
-
-	.countdown {
-		align-items: center;
-	}
-
-	.time {
-		margin: 10px;
-	}
-
-	.time h2 {
-		font-size: 32px;
-		margin: 0;
-	}
-
-	.time small {
-		font-size: 16px;
-	}
-}
 
 /* Preloader */
 
