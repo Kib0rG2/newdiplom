@@ -10,128 +10,70 @@
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(97582205, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true,
+             webvisor:true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/97582205" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <header class="header">
-    <img class="header__background" src="images/header-background.png" alt="background">
+    <img class="header__background" src="../images/header-background.png" alt="background">
     <div class="header_top">
-        <div class="logo">
-            <a href="" class="logo">
-                <img class="logo" src="images/logo.png">
-            </a>
-        </div>
-        <nav class="navigation">
-            <ul class="menu">
-                <li class="menu-element">
-                    <a class="menu-element__link active" href="">Главная</a>
-                </li>
-                <li class="menu-element">
-                    <a class="menu-element__link" href="#katalog">Каталог</a>
-                </li>
-                <li class="menu-element">
-                    <a class="menu-element__link" href="#about-me">Описание </a>
-                </li>
-                <li class="menu-element">
-                    <a class="menu-element__link" href="#ivents">События</a>
-                </li>
-                <li class="menu-element">
-                    <a href="https://www.wildberries.ru/seller/374476" class="menu-element__link" href="#ivents">
-                        Wildberries</a>
-                </li>
-            </ul>
+    <a href="../index.html" class="logo">V I N P</a>
+        <ul class="menu">
+            <li class="menu-element">
+                <a class="menu-element__link active" href="index.html">Главная</a>
+            </li>
+            <li class="menu-element">
+                <a class="menu-element__link" href="html/katalog.html">Каталог</a>
+            </li>
+            <li class="menu-element">
+                <a class="menu-element__link" href="html/about-me.html">О нас </a>
+            </li>
+            <li class="menu-element">
+                <a class="menu-element__link" href="html/ivents.html">События</a>
+            </li>
+            <li class="menu-element">
+                <a href="https://www.wildberries.ru/seller/374476" class="menu-element__link" href="#ivents">
+                    На Wildberries</a>
+            </li>
+        </ul>
         </nav>
     </div>
 </header>
-<section id="about-me" class="about-me">
-    <h2 class="second-title">О нас</h2>
-    <div class="about-me__text">
-        <p class="about-me__title">Vinp| Товары для спорта с WB</p>
-        <p class="about-me__second-title">Мы</p>
-        <hr class="line_1">
-        <p class="about-me__description">
-            Если ты ищешь качественное оборудование для домашгих тренировок, функциональные аксессуары для фитнеса
-            и всё, что поможет сделать твои занятия максимально<br> эффективными - ты в правильном месте!</p>
-        <p class="about-me__description_1">-Массажные валики для спины</p>
-        <p class="about-me__description_1">-Спортивные топы</p>
-        <p class="about-me__description_1">-Мячи массажные с шипами</p>
-        <p class="about-me__description_1">-Ролики для пресса</p>
-        <p class="about-me__description_1">-Тканевые фитнес резинки</p>
-        <p class="about-me__description_1">-Массажёры для тела</p>
-        <p class="about-me__description">Закажите сппортивные товары с VINP Wildberries, чтобы прокачать
-            свою активност и насладиться качественными продуктами.<br>
-            Присоединяйтесь к нам и начните своё спортивное приключение уже сегодня.</p>
-        <p class="about-me__second-title">Продано</p>
-        <hr class="line_2">
-        <p class="about-me__description">36 648 товаров</p>
-        <p class="about-me__second-title">Мы работаем</p>
-        <hr class="line_3">
-        <p class="about-me__description">2 года 6 месяцев на Wildberries</p>
-</section>
-<section class="slider">
-    <div id="slider-container">
-        <div id="slider-images">
-            <img class="slider-image" src="images/slider/1.jpg" alt="Image 1">
-            <img class="slider-image" src="images/slider/2.jpg" alt="Image 2">
-            <img class="slider-image" src="images/slider/3.jpg" alt="Image 3">
-        </div>
-        <div id="prev-btn">&#10094;</div>
-        <div id="next-btn">&#10095;</div>
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/slider.js"></script>
-</section>
 <section id="katalog" class="katalog">
     <h2 class="second-title">Каталог</h2>
     <div class="katalog__list">
         <div class="katalog-wrapper">
-            <img src="images/tovar/ball.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Мяч массажный</p>
+            <img src="../images/tovar/ball.png" alt="" class="katalog-image /">
+            <a href="https://www.wildberries.ru/catalog/162449952/detail.aspx" class="katalog-title bold">Мяч массажный</a>
             <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">3.8</p>
+            <p class="katalog-text-rating">4.8</p>
             <p class="katalog-text_price">175 ₽</p>
              <p class="katalog-text"><s>1 160 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
-            <img src="images/tovar/эспандеры.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Фитнес эспандеры</p>
+            <img src="../images/tovar/espanders.png" alt="" class="katalog-image /">
+            <a href="https://www.wildberries.ru/catalog/51112970/detail.aspx" class="katalog-title bold">Фитнес эспандеры</a>
             <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">4.8</p>
+            <p class="katalog-text-rating">4.8</p>
             <p class="katalog-text_price">683 ₽</p>
              <p class="katalog-text"><s>4 700 ₽</s></p>
-        </div>
-        <div class="katalog-wrapper">
-            <img src="images/tovar/ролик для пресса.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Ролик для пресса</p>
-            <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">4.8</p>
-            <p class="katalog-text_price">701 ₽</p>
-             <p class="katalog-text"><s>2 120 ₽</s></p>
-        </div>
-        <div class="katalog-wrapper">
-            <img src="images/tovar/массажёр.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Перкуссионный массажер <br> для тела</p>
-             <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">4.8</p>
-            <p class="katalog-text_price">1 256 ₽</p>
-             <p class="katalog-text"><s>4 465 ₽</s></p>
-        </div>
-        <div class="katalog-wrapper">
-            <img src="images/tovar/массажный валик.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Валик для спины массажный</p>
-            <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">4.9</p>
-            <p class="katalog-text_price">899 ₽</p>
-             <p class="katalog-text"><s>3 627 ₽</s></p>
-        </div>
-        <div class="katalog-wrapper">
-            <img src="images/tovar/массажёр2.png" alt="" class="katalog-image /">
-            <p class="katalog-title bold">Перкуссионный массажер <br> для тела</p>
-            <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text">4.8</p>
-            <p class="katalog-text_price">1 989 ₽</p>
-            <p class="katalog-text"><s>6 405 ₽</s></p>
         </div>
     </div>
 </section>
@@ -139,127 +81,92 @@
     <h2 class="second-title">Новости</h2>
     <div class="news__list">
         <div class="news-wrapper">
-            <p class="news-text ">Не допускайте таких ошибок при похудении!</p>
-            <iframe class="video" src="https://vk.com/video_ext.php?oid=-121806510&id=456239042&hash=e8f852572116f523" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
-        </div>
-        <div class="news-wrapper">
-            <p class="news-text">Чем полезны занятия спортом? Узнайте в этом видео.</p>
-            <iframe src="https://vk.com/video_ext.php?oid=-121806510&id=456239036&hash=e1a6bc1115c146a0" width="333" height="660" frameborder="0" allowfullscreen="1" allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <p class="news-text ">Не допускайте таких ошибок <br> при похудении!</p>
+            <iframe class="video" src="https://vk.com/video_ext.php?oid=-121806510&id=456239042&hash=e8f852572116f523"
+                    width="333" height="660" frameborder="0" allowfullscreen="1"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </div>
-</section>
-<section id="ivents" class="ivents">
-    <h2 class="second-title">События</h2>
-    <div class="countdown-wrapper">
-        <h2 class="title_timer">До обновления ассортимента осталось:</h2>
-        <div class="month" id="month"></div>
-        <div class="countdown" id="countdown">
-            <div class="time">
-                <h2 id="days">00</h2>
-                <small>дней</small>
-            </div>
-            <div class="time">
-                <h2 id="hours">00</h2>
-                <small>часов</small>
-            </div>
-            <div class="time">
-                <h2 id="minutes">00</h2>
-                <small>минут</small>
-            </div>
-            <div class="time">
-                <h2 id="seconds">00</h2>
-                <small>секунд</small>
-            </div>
-        </div>
-        <div class="preloader" id="preloader">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
-            </div>
-        </div>
-    </div>
-    <script src="js/timer.js"></script>
-
 </section>
 <section class="contact-me">
-    <form action="https://api.web3forms.com/submit" method="POST">
-
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
         <!-- Replace with your Access Key -->
         <input type="hidden" name="access_key" value="aec1fec2-eb33-4622-a095-e2573335aa52">
 
         <!-- Form Inputs. Each input must have a name="" attribute -->
         <label class="label" for="name">
-        <input type="text" name="name" placeholder="Имя" required>
+            <input type="text" name="name" placeholder="Имя" required>
         </label>
         <label class="label" for="e-mail">
             <input type="email" name="email" placeholder="E-mail" required>
         </label>
-        <label class="label" for="Сообщение">
-        <textarea name="message" placeholder="Сообщение" required></textarea>
+        <label class="label" for="message">
+            <textarea name="message" placeholder="Сообщение" required></textarea>
         </label>
-
         <!-- hCaptcha Spam Protection -->
         <div class="h-captcha" data-captcha="true"></div>
 
-        <button type="submit">Отправить сообщение</button>
+        <!-- Обязательный чекбокс для согласия с политикой конфиденциальности -->
+        <label class="checkbox-label">
+            <input type="checkbox" name="terms" id="terms" required>
+            Я согласен с <a href="../html/privacy.html">Политикой конфиденциальности</a>
+        </label>
 
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить сообщение</button>
     </form>
-    <!-- Required for hCaptcha -->
-    <script src="https://web3forms.com/client/script.js" async defer></script>
 </section>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <footer class="footer">
-    <ul class="socials">
-        <h2 class="second-title">Соцсети</h2>
-        <hr class="line__footer">
-        <li class="social-elements">
-            <label class="label_1" for="ВКонтакте">
-                <a href="https://vk.com/vinp_life" class="social-elements__link" for="ВКонтакте">ВКонтакте</a>
-            </label>
-        </li>
-        <li class="social-elements">
-            <label class="label_1" for="Одноклассники">
-                <a href="" class="social-elements__link">Одноклассники</a>
-            </label>
-        </li>
-        <li class="social-elements">
-            <label class="label_1" for="Наш Youtube канал">
-                <a href="https://youtube.com/@vinpsport" class="social-elements__link">Наш Youtube канал</a>
-            </label>
-        </li>
-    </ul>
-    <ul class="footer-menu">
-        <h2 class="second-title">Меню</h2>
-        <hr class="line__footer">
-        <li class="footer-menu-elements">
-            <a href="" class="footer-elements__link">Главная</a>
-        </li>
-        <li class="footer-menu-elements">
-            <a href="" class="footer-elements__link">Каталог</a>
-        </li>
-        <li class="footer-menu-elements">
-            <a href="" class="footer-elements__link">О нас</a>
-        </li>
-        <li class="footer-menu-elements">
-            <a href="" class="footer-elements__link">События</a>
-        </li>
-    </ul>
-    <ul class="contacts">
-        <h2 class="second-title">Контакты</h2>
-        <hr class="line__footer">
-        <li class="contacts-elements">
-            <a href="" class="contacnts-elements__link">+7 989 633-86-42</a>
-        </li>
-        <li class="contacts-elements">
-            <a href="https://web.telegram.org/a/#6775255874" class="contacnts-elements__link">Наш телеграмм бот</a>
-        </li>
-        <li class="contacts-elements">
-            <a href="https://web.telegram.org/a/#5792832316" class="contacnts-elements__link">Наш менеджер</a>
-        </li>
-    </ul>
+    <div class="footer_elements">
+        <ul class="socials">
+            <h2 class="second-title_footer">Соцсети</h2>
+            <li class="social-elements">
+                <label class="label_1" for="TG">
+                    <a href="https://vk.com/vinp_life" class="social-elements__link">Telegram</a>
+                </label>
+            </li>
+            <li class="social-elements">
+            <li class="social-elements">
+                <label class="label_1" for="ВКонтакте">
+                    <a href="https://web.telegram.org/a/#6775255874" class="social-elements__link">VK</a>
+                </label>
+            </li>
+            <li class="social-elements">
+                <label class="label_1" for="Наш Youtube канал">
+                    <a href="https://youtube.com/@vinpsport" class="social-elements__link">Youtube</a>
+                </label>
+            </li>
+        </ul>
+        <ul class="footer-menu">
+            <h2 class="second-title_footer">Меню</h2>
+            <li class="footer-menu-elements">
+                <a href="index.html" class="footer-elements__link">Главная</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/katalog.html" class="footer-elements__link">Каталог</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/about-me.html" class="footer-elements__link">О нас</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/ivents.html" class="footer-elements__link">События</a>
+            </li>
+        </ul>
+        <ul class="contacts">
+            <h2 class="second-title_footer">Контакты</h2>
+            <li class="contacts-elements">
+                <a href="" class="contacnts-elements__link">+7 989 633-86-42</a>
+            </li>
+            <li class="contacts-elements">
+                <a href="https://web.telegram.org/a/#5792832316" class="contacnts-elements__link">Менеджер</a>
+            </li>
+        </ul>
+    </div>
 </footer>
 <section class="footer-description">
     <p class="footer-about">
-        VINP &nbsp; | &nbsp; Товары &nbsp; для &nbsp;спорта &nbsp; с &nbsp; WB &nbsp;
+        VINP &nbsp; | &nbsp; Товары &nbsp; для &nbsp;спорта &nbsp; &nbsp;
     </p>
 </section>
 </body>

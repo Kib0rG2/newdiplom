@@ -2,7 +2,7 @@ $(document).ready(function(){
   var currentIndex = 0;
   var slides = $('.slider-image');
   var totalSlides = slides.length;
-  var interval = setInterval(nextSlide, 5000); // Интервал в миллисекундах (5000 = 5 секунд)
+  var interval = setInterval(nextSlide, 2000); // Интервал в миллисекундах (5000 = 5 секунд)
 
   function showSlide(index) {
     if (index < 0) {

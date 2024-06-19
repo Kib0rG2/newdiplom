@@ -1,10 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Сайт-визитка</title>
+
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(97582205, "init", {
+             clickmap:true,
+             trackLinks:true,
+             accurateTrackBounce:true,
+             webvisor:true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/97582205" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 <body>
+<header class="header">
+    <img class="header__background" src="../images/header-background.png" alt="background">
+    <div class="header_top">
+        <a href="../index.html" class="logo">V I N P</a>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="menu-element">
+                    <a class="menu-element__link " href="../index.html">Главная</a>
+                </li>
+                <li class="menu-element">
+                    <a class="menu-element__link " href="../html/katalog.html">Каталог</a>
+                </li>
+                <li class="menu-element">
+                    <a class="menu-element__link active" href="../html/about-me.html">О нас </a>
+                </li>
+                <li class="menu-element">
+                    <a class="menu-element__link" href="../html/ivents.html">События</a>
+                </li>
+                <li class="menu-element">
+                    <a href="https://www.wildberries.ru/seller/374476" class="menu-element__link" href="#ivents">
+                        На Wildberries</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="about-me" class="about-me">
+    <h2 class="second-title">О нас</h2>
+    <div class="about-me__text">
+        <p class="about-me__title">Vinp| Товары для спорта с WB</p>
+        <p class="about-me__second-title">Мы</p>
+        <hr class="line_1">
+        <p class="about-me__description">
+            Если ты ищешь качественное оборудование для домашних тренировок, функциональные аксессуары для фитнеса и всё, что поможет сделать твои занятия максимально эффективными - ты в правильном месте!</p>
+        <p class="about-me__description_1">-Массажные валики для спины</p>
+        <p class="about-me__description_1">-Спортивные топы</p>
+        <p class="about-me__description_1">-Мячи массажные с шипами</p>
+        <p class="about-me__description_1">-Ролики для пресса</p>
+        <p class="about-me__description_1">-Тканевые фитнес резинки</p>
+        <p class="about-me__description_1">-Массажёры для тела</p>
+        <p class="about-me__description">Закажите сппортивные товары с VINP Wildberries, чтобы прокачать
+            свою активность и насладиться качественными продуктами.
+            Присоединяйтесь к нам и начните своё спортивное приключение уже сегодня.</p>
+        <p class="about-me__second-title">Продано</p>
+        <hr class="line_2">
+        <p class="about-me__description">36 648 товаров</p>
+        <p class="about-me__second-title">Мы работаем</p>
+        <hr class="line_3">
+        <p class="about-me__description">2 года 6 месяцев на Wildberries</p>
+</section>
+<section class="contact-me">
+    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="aec1fec2-eb33-4622-a095-e2573335aa52">
 
+        <!-- Form Inputs. Each input must have a name="" attribute -->
+        <label class="label" for="name">
+            <input class="input" type="text" name="name" placeholder="Имя" required>
+        </label>
+        <label class="label" for="e-mail">
+            <input class="input" type="email" name="email" placeholder="E-mail" required>
+        </label>
+        <label class="label" for="message">
+            <textarea class="input" name="message" placeholder="Сообщение" required></textarea>
+        </label>
+        <!-- hCaptcha Spam Protection -->
+        <div class="h-captcha" data-captcha="true"></div>
+
+        <!-- Обязательный чекбокс для согласия с политикой конфиденциальности -->
+        <label class="checkbox-label">
+            <input type="checkbox" name="terms" id="terms" required>
+            Я согласен с <a href="../html/privacy.html">Политикой конфиденциальности</a>
+        </label>
+
+        <!-- Кнопка отправки формы -->
+        <button type="submit">Отправить сообщение</button>
+    </form>
+</section>
+<footer class="footer">
+    <div class="footer_elements">
+        <ul class="socials">
+            <h2 class="second-title">Соцсети</h2>
+            <li class="social-elements">
+                <label class="label_1" for="TG">
+                    <a href="https://vk.com/vinp_life" class="social-elements__link">Telegram</a>
+                </label>
+            </li>
+            <li class="social-elements">
+            <li class="social-elements">
+                <label class="label_1" for="ВКонтакте">
+                    <a href="https://web.telegram.org/a/#6775255874" class="social-elements__link">VK</a>
+                </label>
+            </li>
+            <li class="social-elements">
+                <label class="label_1" for="Наш Youtube канал">
+                    <a href="https://youtube.com/@vinpsport" class="social-elements__link">Youtube</a>
+                </label>
+            </li>
+        </ul>
+        <ul class="footer-menu">
+            <h2 class="second-title">Меню</h2>
+            <li class="footer-menu-elements">
+                <a href="index.html" class="footer-elements__link">Главная</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/katalog.html" class="footer-elements__link">Каталог</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/about-me.html" class="footer-elements__link">О нас</a>
+            </li>
+            <li class="footer-menu-elements">
+                <a href="html/ivents.html" class="footer-elements__link">События</a>
+            </li>
+        </ul>
+        <ul class="contacts">
+            <h2 class="second-title">Контакты</h2>
+            <li class="contacts-elements">
+                <a href="" class="contacnts-elements__link">+7 989 633-86-42</a>
+            </li>
+            <li class="contacts-elements">
+                <a href="https://web.telegram.org/a/#5792832316" class="contacnts-elements__link">Менеджер</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<section class="footer-description">
+    <p class="footer-about">
+        VINP &nbsp; | &nbsp; Товары &nbsp; для &nbsp;спорта &nbsp; &nbsp;
+    </p>
+</section>
 </body>
 </html>

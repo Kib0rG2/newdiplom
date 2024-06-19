@@ -1,19 +1,16 @@
 <form method="POST" id="form">
 
-    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+    <input type="hidden" name="access_key" value="aec1fec2-eb33-4622-a095-e2573335aa52">
 
     <input type="text" name="name" required>
     <input type="email" name="email" required>
     <textarea name="message" required></textarea>
-    <div class="h-captcha" data-captcha="true"></div>
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
     <button type="submit">Submit Form</button>
-
     <div id="result"></div>
 
 </form>
-
-<script src="https://web3forms.com/client/script.js" async defer></script>
 
 <script>
 const form = document.getElementById('form');
