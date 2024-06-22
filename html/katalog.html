@@ -5,9 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Сайт-визитка</title>
+    <title>Каталог</title>
 
-    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="icon" href="../icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
 
@@ -92,6 +92,14 @@
             <p class="katalog-text"><s>4 465 ₽</s></p>
         </div>
         <div class="katalog-wrapper">
+            <img src="../images/tovar/m1.png" alt="" class="katalog-image /">
+            <a href="https://www.wildberries.ru/catalog/197063775/detail.aspx" class="katalog-title bold">Перкуссионный массажер <br> для тела</a>
+            <p class="katalog-text_vinp">VINP</p>
+            <p class="katalog-text-rating">4.8</p>
+            <p class="katalog-text_price">1 256 ₽</p>
+            <p class="katalog-text"><s>4 465 ₽</s></p>
+        </div>
+        <div class="katalog-wrapper">
             <img src="../images/tovar/m2.png" alt="" class="katalog-image /">
             <a href="https://www.wildberries.ru/catalog/208247660/detail.aspx" class="katalog-title bold">Перкуссионный массажер <br> для тела</a>
             <p class="katalog-text_vinp">VINP</p>
@@ -99,14 +107,7 @@
             <p class="katalog-text_price">1 989 ₽</p>
             <p class="katalog-text"><s>6 405 ₽</s></p>
         </div>
-        <div class="katalog-wrapper">
-            <img src="../images/tovar/ball.png" alt="" class="katalog-image /">
-            <a href="https://www.wildberries.ru/catalog/162449952/detail.aspx" class="katalog-title bold">Мяч массажный</a>
-            <p class="katalog-text_vinp">VINP</p>
-            <p class="katalog-text-rating">4.8</p>
-            <p class="katalog-text_price">175 ₽</p>
-             <p class="katalog-text"><s>1 160 ₽</s></p>
-        </div>
+
     </div>
 </section>
 <section class="slider">
@@ -138,6 +139,9 @@
         <label class="label" for="message">
             <textarea name="message" placeholder="Сообщение" required></textarea>
         </label>
+        <!-- hCaptcha Spam Protection -->
+        <div class="h-captcha" data-captcha="true"></div>
+
         <!-- Обязательный чекбокс для согласия с политикой конфиденциальности -->
         <label class="checkbox-label">
             <input type="checkbox" name="terms" id="terms" required>
@@ -146,13 +150,13 @@
 
         <!-- Кнопка отправки формы -->
         <button type="submit">Отправить сообщение</button>
-        <script src="../js/contact-me.js"></script>
     </form>
 </section>
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <footer class="footer">
     <div class="footer_elements">
     <ul class="socials">
-        <h2 class="second-title">Соцсети</h2>
+        <h2 class="second-title_footer">Соцсети</h2>
         <li class="social-elements">
             <label class="label_1" for="TG">
                 <a href="https://vk.com/vinp_life" class="social-elements__link" >Telegram</a>
@@ -171,22 +175,22 @@
         </li>
     </ul>
     <ul class="footer-menu">
-        <h2 class="second-title">Меню</h2>
+        <h2 class="second-title_footer">Меню</h2>
         <li class="footer-menu-elements">
-            <a href="index.html" class="footer-elements__link">Главная</a>
+            <a href="../index.html" class="footer-elements__link">Главная</a>
         </li>
         <li class="footer-menu-elements">
-            <a href="html/katalog.html" class="footer-elements__link">Каталог</a>
+            <a href="../html/katalog.html" class="footer-elements__link">Каталог</a>
         </li>
         <li class="footer-menu-elements">
-            <a href="html/about-me.html" class="footer-elements__link">О нас</a>
+            <a href="../html/about-me.html" class="footer-elements__link">О нас</a>
         </li>
         <li class="footer-menu-elements">
-            <a href="html/ivents.html" class="footer-elements__link">События</a>
+            <a href="../html/ivents.html" class="footer-elements__link">События</a>
         </li>
     </ul>
     <ul class="contacts">
-        <h2 class="second-title">Контакты</h2>
+        <h2 class="second-title_footer">Контакты</h2>
         <li class="contacts-elements">
             <a href="" class="contacnts-elements__link">+7 989 633-86-42</a>
         </li>
