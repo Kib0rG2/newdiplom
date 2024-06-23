@@ -67,7 +67,6 @@ a:hover {
 
     height: 70px;
     color: black;
-    z-index: 2;
 }
 
 .header_top a {
@@ -613,6 +612,7 @@ katalog__list{
 
 .header {
     position: relative;
+    height:320px;
 }
 .header_top{
    flex-direction: column;
@@ -620,7 +620,7 @@ katalog__list{
    gap: 20px;
 }
 .header__background{
-    margin-top: 140px;
+    margin-top: 180px;
 }
 .navigation{
     margin: 20px 0px;
@@ -632,6 +632,9 @@ katalog__list{
   white-space: nowrap;
   width: 100vw;
   padding: 11px 0px;
+}
+.menu-element{
+    margin-right: 20px;
 }
 .logo{
     justify-content: center;
